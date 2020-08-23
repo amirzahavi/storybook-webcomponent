@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`trax-button should reflect slot 1`] = `"<trax-button><span>test</span></trax-button>"`;

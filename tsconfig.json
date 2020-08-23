@@ -1,0 +1,25 @@
+{
+  "include": [
+    "packages/**/lib",
+    "declaration.d.ts"
+  ],
+  "compilerOptions": {
+    "module": "ES2020",
+    "target": "ES2019",
+    "lib": ["ES2019", "dom"],
+    "sourceMap": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}

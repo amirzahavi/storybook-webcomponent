@@ -1,0 +1,46 @@
+{
+  "name": "storybook-webcomponent",
+  "version": "1.0.0",
+  "description": "example project for storybook with web-components (LitElement) and SASS",
+  "main": "index.js",      
+  "scripts": {
+    "bootstrap": "npx lerna bootstrap --hoist",            
+    "test": "jest",
+    "test:watch": "jest --watch",    
+    "start": "start-storybook",    
+    "build:storybook": "build-storybook --quiet",
+    "build": "tsc",        
+    "chromatic": "npx chromatic --build-script-name=build:storybook --exit-zero-on-changes --exit-once-uploaded"
+  },
+  "dependencies": {    
+    "@polymer/polymer": "^3.4.1",
+    "chromatic": "^5.1.0",
+    "lit-element": "2.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-notes": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/theming": "^5.3.19",
+    "@storybook/web-components": "^5.3.19",
+    "@types/jest": "^26.0.9",
+    "babel-jest": "^26.2.2",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.0",
+    "extract-loader": "^5.1.0",
+    "jest": "^26.2.2",
+    "jest-junit": "^11.1.0",
+    "lerna": "^3.22.1",
+    "lit-scss-loader": "^1.0.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "storybook-dark-mode": "^0.6.1",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7"
+  }
+}

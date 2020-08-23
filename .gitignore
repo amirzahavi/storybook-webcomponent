@@ -1,0 +1,10 @@
+.idea
+.vscode
+node_modules
+*.log
+coverage
+.nyc_output
+storybook-static
+packages/**/*.js
+packages/**/*.js.map
+packages/**/*.d.ts

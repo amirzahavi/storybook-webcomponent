@@ -1,0 +1,188 @@
+@import '../../../assets/scss/color-palette.scss';
+
+:host {
+  // Background
+  --background-idle: #{$purply};
+  --background-hover: #{$ActionPress};
+  --background-press: #{$ActionPress};
+  --backround-disabled: #{$white-purple};
+  // Border
+  --border-idle: #{$purply};
+  --border-hover: #{$ActionPress};
+  --border-press: #{$ActionPress};
+  --border-disabled: #{$white-purple};
+  // Text
+  --text-idle: #{$white};
+  --text-hover: #{$white};
+  --text-press: #{$white};
+  --text-disabled: #{$white};
+  // Font
+  --font-size: 13px;
+}
+
+:host [theme=trax-dark] {
+  // Background
+  --background-main-idle: #8b45cc;
+  --background-main-hover: #a975d9;
+  --background-main-press: #a975d9;
+  --background-main-disabled: #6c5382;
+
+  --background-secondary-idle: #3a3a3a;
+  --background-secondary-hover: #3a3a3a;
+  --background-secondary-press: #3a3a3a;
+  --background-secondary-disabled: #3a3a3a;
+
+  --background-link-idle: transparent;
+  --background-link-hover: transparent;
+  --background-link-press: transparent;
+  --background-link-disabled: transparent;
+
+
+  // Border
+  --border-main-idle: #8b45cc;
+  --border-main-hover: #a975d9;
+  --border-main-press: #a975d9;
+  --border-main-disabled: #6c5382;
+
+  --border-secondary-idle: #9d4ee6;
+  --border-secondary-hover: #a975d9;
+  --border-secondary-press: #a975d9;
+  --border-secondary-disabled: #6c5382;
+
+  --border-link-idle: transparent;
+  --border-link-hover: transparent;
+  --border-link-press: transparent;
+  --border-link-disabled: transparent;
+
+  // Text
+  --text-main-idle: #fff;
+  --text-main-hover: #fff;
+  --text-main-press: #fff;
+  --text-main-disabled: #ffffff59;
+
+  --text-secondary-idle: #aaa;
+  --text-secondary-hover: #eee;
+  --text-secondary-press: #eee;
+  --text-secondary-disabled: #ffffff59;
+
+  --text-link-idle: #9d4ee6;
+  --text-link-hover: #b37ce6;
+  --text-link-press: #b37ce6;
+  --text-link-disabled: #6c5382;
+}
+
+:host {
+  width: fit-content;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+  font-size:  var(--font-size);
+  border-radius: 3px;
+  padding: 9px 15px;
+  user-select: none;
+  color: var(--text-idle);
+  background-color: var(--background-idle);
+  border: 1px solid var(--border-idle);
+
+  &:hover {
+    color: var(--text-hover);
+    background-color: var(--background-hover);
+    border-color: var(--border-hover);
+  }
+
+  &:active {
+    color: var(--text-press);
+    background-color: var(--background-press);
+    border-color: var(--border-press);
+  }
+
+  &[secondary] {
+    --background-idle: #{$white};
+    --background-hover: #{$white};
+    --background-press: #{$white};
+    --background-disabled: #{$white};
+
+    --text-idle: #{$purply};
+    --text-hover: #{$ActionPress};
+    --text-press: #{$ActionPress};
+    --text-disabled: #{$white-purple};
+
+
+    color: var(--text-idle);
+    background-color: var(--background-idle);
+    border-color: var(--border-idle);
+
+    &:hover {
+      color: var(--text-hover);
+      background-color: var(--background-hover);
+      border-color: var(--border-hover);
+    }
+
+    &:active {
+      color: var(--text-press);
+      background-color: var(--background-press);
+      border-color: var(--border-press);
+    }
+  }
+
+  &[link] {
+    --background-idle: transparent;
+    --background-hover: transparent;
+    --background-press: transparent;
+    --background-disabled: transparent;
+
+    --border-idle: transparent;
+    --border-hover: transparent;
+    --border-press: transparent;
+    --border-disabled: transparent;
+
+    --text-idle: #{$purply};
+    --text-hover: #{$ActionPress};
+    --text-press: #{$ActionPress};
+    --text-disabled: #{$white-purple};
+
+    color: var(--text-idle);
+    background-color: var(--background-idle);
+    border-color: var(--border-idle);
+
+    &:hover {
+      color: var(--text-hover);
+      background-color: var(--background-hover);
+      border-color: var(--border-hover);
+    }
+
+    &:active {
+      color: var(--text-press);
+      background-color: var(--background-press);
+      border-color: var(--border-press);
+    }
+  }
+}
+
+// Disabled
+:host([disabled]:not([disabled=false])) {
+  pointer-events: none;
+
+  .button {
+    color: var(--text-disabled);
+    background-color: var(--backround-disabled);
+    border-color: var(--border-disabled);
+  }
+
+  [secondary] {
+    color: var(--text-disabled);
+    background-color: var(--background-disabled);
+    border-color: var(--border-disabled);
+  }
+
+  [link] {
+    color: var(--text-disabled);
+    background-color: var(--background-disabled);
+    border-color: var(--border-disabled);
+  }
+}
